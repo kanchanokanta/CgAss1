@@ -12,7 +12,8 @@ public class PointPixel extends JPanel {
     public PointPixel() {
         try {
             // อ่านไฟล์ภาพจากไฟล์
-            backgroundImage = ImageIO.read(new File("/Users/nattawadeekwankao/Desktop/SecondYear/CG/assignment1/CgAss1/Assignment1/รูป/1.jpg"));
+            backgroundImage = ImageIO.read(new File(
+                    "/Users/nattawadeekwankao/Desktop/SecondYear/CG/assignment1/CgAss1/Assignment1/รูป/6.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -31,6 +32,7 @@ public class PointPixel extends JPanel {
         JFrame f = new JFrame();
         f.add(n);
         f.setTitle("New Year");
+        f.setResizable(false);
         f.setSize(600, 600);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
@@ -41,16 +43,17 @@ public class PointPixel extends JPanel {
         super.paintComponent(g);
 
         if (backgroundImage != null) {
-            // คำนวณตำแหน่งภาพใน JPanel
             int panelWidth = getWidth();
             int panelHeight = getHeight();
-            int imageWidth = backgroundImage.getWidth(this);
-            int imageHeight = backgroundImage.getHeight(this);
 
-            int x = (panelWidth - imageWidth) / 2;
-            int y = (panelHeight - imageHeight) / 2;
+            // ปรับขนาดรูปภาพ
+            Image scaledImage = backgroundImage.getScaledInstance(panelWidth, panelHeight, Image.SCALE_SMOOTH);
 
-            g.drawImage(backgroundImage, x, y, this);
+            // คำนวณตำแหน่ง
+            int x = (panelWidth - scaledImage.getWidth(this)) / 2;
+            int y = (panelHeight - scaledImage.getHeight(this)) / 2;
+
+            g.drawImage(scaledImage, x, y, this);
         }
     }
 }
