@@ -13,7 +13,7 @@ public class PointPixel extends JPanel {
         try {
             // อ่านไฟล์ภาพจากไฟล์
             backgroundImage = ImageIO.read(new File(
-                    "/Users/nattawadeekwankao/Desktop/SecondYear/CG/assignment1/CgAss1/Assignment1/รูป/6.jpg"));
+                    "H:\\My Drive\\Year 2 term 2\\COMPUTER GRAPHICS\\Assignment\\Assignment1\\รูป\\Reference.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -36,6 +36,7 @@ public class PointPixel extends JPanel {
         f.setSize(600, 600);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
+        f.setLocationRelativeTo(null);
     }
 
     @Override
