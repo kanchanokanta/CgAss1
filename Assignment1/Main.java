@@ -99,12 +99,12 @@ public class Main extends JPanel {
 
         // หูใน
         g2.setColor(upperDragon);
-        bazierCurve(g2, 344, 228, 332, 236, 318, 241, 300, 243);
+        bezierCurve(g2, 344, 228, 332, 236, 318, 241, 300, 243);
         bresenhamLine(g2, 300, 243, 305, 235);
         bezierCurve(g2, 305, 235, 296, 240, 281, 244, 276, 241);
         bezierCurve(g2, 305, 235, 296, 240, 281, 244, 276, 241);
         bresenhamLine(g2, 276, 241, 303, 217);
-        bazierCurve(g2, 303, 217, 312, 210, 327, 206, 347, 209);
+        bezierCurve(g2, 303, 217, 312, 210, 327, 206, 347, 209);
         buffer = floodFill(buffer, 315, 226, fur, upperDragon);
         // เขา
         g2.setColor(Color.decode("#383F50"));
@@ -141,16 +141,16 @@ public class Main extends JPanel {
         bresenhamLine(g2, 285, 432, 301, 432);
         buffer = floodFill(buffer, 284, 404, moon, Color.decode("#C18543"));
         g2.setColor(bodyRabbit);
-        bazierCurve(g2, 290, 384, 312, 387, 308, 411, 296, 411);
+        bezierCurve(g2, 290, 384, 312, 387, 308, 411, 296, 411);
         buffer = floodFill(buffer, 297, 397, moon, bodyRabbit);
         // หัวกระต่าย
-        bazierCurve(g2, 130, 297, 130, 306, 148, 322, 176, 331);
-        bazierCurve(g2, 130, 297, 128, 290, 130, 281, 142, 281);
-        bazierCurve(g2, 142, 281, 150, 280, 174, 286, 196, 300);
-        bazierCurve(g2, 176, 331, 183, 357, 198, 372, 228, 376);
-        bazierCurve(g2, 228, 376, 265, 371, 284, 365, 290, 332);//
-        bazierCurve(g2, 196, 300, 215, 290, 235, 285, 263, 311);
-        bazierCurve(g2, 263, 311, 259, 310, 269, 317, 290, 332);//
+        bezierCurve(g2, 130, 297, 130, 306, 148, 322, 176, 331);
+        bezierCurve(g2, 130, 297, 128, 290, 130, 281, 142, 281);
+        bezierCurve(g2, 142, 281, 150, 280, 174, 286, 196, 300);
+        bezierCurve(g2, 176, 331, 183, 357, 198, 372, 228, 376);
+        bezierCurve(g2, 228, 376, 265, 371, 284, 365, 290, 332);//
+        bezierCurve(g2, 196, 300, 215, 290, 235, 285, 263, 311);
+        bezierCurve(g2, 263, 311, 259, 310, 269, 317, 290, 332);//
         buffer = floodFill(buffer, 209, 320, moonInside, bodyRabbit);
         buffer = floodFill(buffer, 218, 356, moon, bodyRabbit);
         buffer = floodFill(buffer, 143, 303, moon, bodyRabbit);
@@ -284,12 +284,12 @@ public class Main extends JPanel {
         buffer = floodFill(buffer, 52, 82, background, Color.WHITE);
 
         //E
-        bazierCurve(g2, 60, 76, 60, 59, 83, 59, 83, 76);
-        bazierCurve(g2, 60, 76, 60, 89, 77, 92, 81, 85);
+        bezierCurve(g2, 60, 76, 60, 59, 83, 59, 83, 76);
+        bezierCurve(g2, 60, 76, 60, 89, 77, 92, 81, 85);
         bresenhamLine(g2, 65, 76, 83, 76);
-        bazierCurve(g2, 65, 76, 65, 88, 81, 83, 81, 82);
+        bezierCurve(g2, 65, 76, 65, 88, 81, 83, 81, 82);
         bresenhamLine(g2, 81, 82, 81, 85);
-        bazierCurve(g2, 65, 72, 67, 66, 79, 66, 79, 72);
+        bezierCurve(g2, 65, 72, 67, 66, 79, 66, 79, 72);
         bresenhamLine(g2, 65, 72, 79, 72);
         buffer = floodFill(buffer, 63, 76, background, Color.WHITE);
 
@@ -323,62 +323,62 @@ public class Main extends JPanel {
         buffer = floodFill(buffer, 151, 85, moon, Color.WHITE);
 
         //e
-        bazierCurve(g2, 163, 76, 163, 59, 186, 59, 186, 76);
-        bazierCurve(g2, 163, 76, 163, 89, 180, 92, 184, 85);
+        bezierCurve(g2, 163, 76, 163, 59, 186, 59, 186, 76);
+        bezierCurve(g2, 163, 76, 163, 89, 180, 92, 184, 85);
         bresenhamLine(g2, 168, 76, 186, 76);
-        bazierCurve(g2, 168, 76, 169, 88, 184, 83, 184, 82);
+        bezierCurve(g2, 168, 76, 169, 88, 184, 83, 184, 82);
         bresenhamLine(g2, 184, 82, 184, 85);
-        bazierCurve(g2, 168, 72, 170, 66, 182, 66, 182, 72);
+        bezierCurve(g2, 168, 72, 170, 66, 182, 66, 182, 72);
         bresenhamLine(g2, 168, 72, 182, 72);
         buffer = floodFill(buffer, 166, 78, moon, Color.WHITE);
 
         //a
-        bazierCurve(g2, 211, 67, 203, 57, 191, 68, 192, 75);
-        bazierCurve(g2, 192, 75, 192, 87, 204, 92, 211, 85);
+        bezierCurve(g2, 211, 67, 203, 57, 191, 68, 192, 75);
+        bezierCurve(g2, 192, 75, 192, 87, 204, 92, 211, 85);
         bresenhamLine(g2, 211, 67, 211, 63);
         bresenhamLine(g2, 211, 63, 216, 63);
         bresenhamLine(g2, 216, 63, 216, 88);
         bresenhamLine(g2, 216, 88, 211, 88);
         bresenhamLine(g2, 211, 88, 211, 85);
-        bazierCurve(g2, 197, 75, 197, 64, 211, 64, 211, 75);
-        bazierCurve(g2, 197, 75, 197, 87, 211, 87, 211, 75);
+        bezierCurve(g2, 197, 75, 197, 64, 211, 64, 211, 75);
+        bezierCurve(g2, 197, 75, 197, 87, 211, 87, 211, 75);
         buffer = floodFill(buffer, 215, 82, moon, Color.WHITE);
 
         //r
         bresenhamLine(g2, 222, 63, 222, 88);
         bresenhamLine(g2, 222, 88, 228, 88);
         bresenhamLine(g2, 228, 88, 228, 72);
-        bazierCurve(g2, 228, 75, 228, 68, 235, 67, 237, 69);
+        bezierCurve(g2, 228, 75, 228, 68, 235, 67, 237, 69);
         bresenhamLine(g2, 237, 69, 237, 63);
-        bazierCurve(g2, 237, 63, 230, 63, 228, 65, 228, 67);
+        bezierCurve(g2, 237, 63, 230, 63, 228, 65, 228, 67);
         bresenhamLine(g2, 228, 63, 221, 63);
         buffer = floodFill(buffer, 226, 85, moon, Color.WHITE);
 
         //2
-        bazierCurve(g2, 21, 116, 36, 89, 72, 111, 37, 141);
+        bezierCurve(g2, 21, 116, 36, 89, 72, 111, 37, 141);
         bresenhamLine(g2, 37, 141, 54, 141);
         bresenhamLine(g2, 54, 141, 54, 149);
         bresenhamLine(g2, 54, 149, 25, 149);
         bresenhamLine(g2, 25, 149, 21, 145);
-        bazierCurve(g2, 21, 145, 62, 110, 34, 106, 29, 120);
+        bezierCurve(g2, 21, 145, 62, 110, 34, 106, 29, 120);
         bresenhamLine(g2, 29, 120, 21, 116);
         buffer = floodFill(buffer, 31, 147, background, Color.WHITE);
 
         //0
-        bazierCurve(g2, 77, 103, 52, 103, 52, 151, 77, 151);
-        bazierCurve(g2, 77, 151, 102, 151, 102, 103, 77, 103);
-        bazierCurve(g2, 77, 112, 63, 113, 67, 146, 77, 142);
-        bazierCurve(g2, 77, 142, 86, 147, 92, 112, 77, 112);
+        bezierCurve(g2, 77, 103, 52, 103, 52, 151, 77, 151);
+        bezierCurve(g2, 77, 151, 102, 151, 102, 103, 77, 103);
+        bezierCurve(g2, 77, 112, 63, 113, 67, 146, 77, 142);
+        bezierCurve(g2, 77, 142, 86, 147, 92, 112, 77, 112);
         
         buffer = floodFill(buffer, 63, 127, background, Color.WHITE);
 
         //2
-        bazierCurve(g2, 101, 116, 116, 89, 152, 111, 117, 141);
+        bezierCurve(g2, 101, 116, 116, 89, 152, 111, 117, 141);
         bresenhamLine(g2, 117, 141, 134, 141);
         bresenhamLine(g2, 134, 141, 134, 149);
         bresenhamLine(g2, 134, 149, 105, 149);
         bresenhamLine(g2, 105, 149, 101, 145);
-        bazierCurve(g2, 101, 145, 142, 110, 114, 106, 109, 120);
+        bezierCurve(g2, 101, 145, 142, 110, 114, 106, 109, 120);
         bresenhamLine(g2, 109, 120, 101, 116);
         buffer = floodFill(buffer, 120, 147, moon, Color.WHITE);
         buffer = floodFill(buffer, 112, 113, background, Color.WHITE);
@@ -402,36 +402,36 @@ public class Main extends JPanel {
         buffer = floodFill(buffer, 164, 133, moon, Color.WHITE);
 
         g2.setColor(firework); // ดาวใต้คางมังกร
-        bazierCurve(g2, 414, 375, 423, 374, 427, 367, 427, 358);
-        bazierCurve(g2, 427, 358, 427, 369, 433, 373, 441, 375); 
-        bazierCurve(g2, 441, 375, 433, 377, 429, 383, 428, 394);
-        bazierCurve(g2, 428, 394, 429, 383, 426, 378, 414, 375);
+        bezierCurve(g2, 414, 375, 423, 374, 427, 367, 427, 358);
+        bezierCurve(g2, 427, 358, 427, 369, 433, 373, 441, 375); 
+        bezierCurve(g2, 441, 375, 433, 377, 429, 383, 428, 394);
+        bezierCurve(g2, 428, 394, 429, 383, 426, 378, 414, 375);
         buffer = floodFill(buffer, 429, 380, moon, firework);
         //ดาวซ้ายล่าง
-        bazierCurve(g2, 14, 548, 24, 546, 28, 542, 28, 526);
-        bazierCurve(g2, 28, 526, 32, 542, 35, 545, 45, 548);
-        bazierCurve(g2, 45, 548, 28, 552, 32, 557, 28, 568);
-        bazierCurve(g2, 28, 568, 24, 555, 27, 552, 14, 548);
+        bezierCurve(g2, 14, 548, 24, 546, 28, 542, 28, 526);
+        bezierCurve(g2, 28, 526, 32, 542, 35, 545, 45, 548);
+        bezierCurve(g2, 45, 548, 28, 552, 32, 557, 28, 568);
+        bezierCurve(g2, 28, 568, 24, 555, 27, 552, 14, 548);
         buffer = floodFill(buffer, 30, 548, background, firework);
         // ตัวมังกร
         g2.setColor(upperDragon);
         //ส่วนบน
-        bazierCurve(g2, 0, 348, 72, 381, 136, 453, 153, 452);
+        bezierCurve(g2, 0, 348, 72, 381, 136, 453, 153, 452);
         //กลาง
         // bazierCurve(g2, 0, 439, 190, 599, 317, 596, 361, 329);
-        bazierCurve(g2, 0, 440, 84, 478, 92, 549, 222, 549);
-        bazierCurve(g2, 241, 546, 326, 513, 362, 360, 361, 329);
+        bezierCurve(g2, 0, 440, 84, 478, 92, 549, 222, 549);
+        bezierCurve(g2, 241, 546, 326, 513, 362, 360, 361, 329);
         //ส่วนล่าง
         g2.setColor(lowerdragon);
-        bazierCurve(g2, 423, 317, 388, 462, 350, 543, 250, 575);
-        bazierCurve(g2, 250, 575, 136, 595, 73, 541, 0, 482);
+        bezierCurve(g2, 423, 317, 388, 462, 350, 543, 250, 575);
+        bezierCurve(g2, 250, 575, 136, 595, 73, 541, 0, 482);
         
         // คอมังกร
         g2.setColor(upperDragon);
-        bazierCurve(g2, 287, 377, 296, 351, 304, 317, 304, 300);
-        bazierCurve(g2, 304, 300, 323, 315, 340, 323, 361, 329);
+        bezierCurve(g2, 287, 377, 296, 351, 304, 317, 304, 300);
+        bezierCurve(g2, 304, 300, 323, 315, 340, 323, 361, 329);
         g2.setColor(lowerdragon);
-        bazierCurve(g2, 361, 329, 382, 329, 400, 325, 423, 317);
+        bezierCurve(g2, 361, 329, 382, 329, 400, 325, 423, 317);
         buffer = floodFill(buffer, 329, 344, moon, upperDragon);
         buffer = floodFill(buffer, 271, 505, background, upperDragon);
         buffer = floodFill(buffer, 104, 471, background, upperDragon);
