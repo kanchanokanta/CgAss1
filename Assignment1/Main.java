@@ -172,7 +172,11 @@ public class Main extends JPanel {
         bezierCurve(g2, 271, 337, 264, 337, 259, 338, 254, 342);
         bresenhamLine(g2, 282, 327, 295, 317);
         bresenhamLine(g2, 289, 328, 295, 324);
-        drawCircleBorder(g2, 236, 342, 14, upperDragon);
+        //แก้มกระต่าย
+        // drawCircleBorder(g2, 236, 342, 14, upperDragon);
+        g2.setColor(upperDragon);
+        bezierCurve(g2, 223, 339, 230, 316, 255, 326, 254, 341);
+        bezierCurve(g2, 223, 339, 222, 368, 258, 356, 254, 341);
         buffer = floodFill(buffer, 231, 340, bodyRabbit, upperDragon);
 
         //คิ้ว
@@ -443,6 +447,36 @@ public class Main extends JPanel {
         buffer = floodFill(buffer, 257, 554, background, lowerdragon);
         buffer = floodFill(buffer, 364, 386, moon, lowerdragon);
 
+        xPoly = new int[] {333, 335, 382, 288};
+        yPoly = new int[] {338, 321, 325, 483};
+        polygon = new Polygon(xPoly, yPoly, nPoints);
+        gradientPaint = new GradientPaint(340, 329, upperDragon, 373, 331, lowerdragon);
+        g2.setPaint(gradientPaint);
+        g2.fillPolygon(polygon);
+
+        xPoly = new int[] {333, 380, 312, 288};
+        yPoly = new int[] {338, 340, 509, 483};
+        polygon = new Polygon(xPoly, yPoly, nPoints);
+        gradientPaint = new GradientPaint(314, 413, upperDragon, 341, 421, lowerdragon);
+        g2.setPaint(gradientPaint);
+        g2.fillPolygon(polygon);
+
+        xPoly = new int[] {333, 380, 312, 288};
+        yPoly = new int[] {338, 340, 509, 483};
+        polygon = new Polygon(xPoly, yPoly, nPoints);
+        gradientPaint = new GradientPaint(314, 413, upperDragon, 341, 421, lowerdragon);
+        g2.setPaint(gradientPaint);
+        g2.fillPolygon(polygon);
+
+        xPoly = new int[] {333, 380, 312, 288};
+        yPoly = new int[] {338, 340, 509, 483};
+        polygon = new Polygon(xPoly, yPoly, nPoints);
+        gradientPaint = new GradientPaint(314, 413, upperDragon, 341, 421, lowerdragon);
+        g2.setPaint(gradientPaint);
+        g2.fillPolygon(polygon);
+
+        
+
         //เกล็ดมังกร ซ้าย -> ขวา
         g2.setColor(Color.BLACK);
         bezierCurve(g2, 0, 362, 0, 357, 13, 361, 13, 366); //แถว1
@@ -545,15 +579,28 @@ public class Main extends JPanel {
         g2.setColor(moon);
         bezierCurve(g2, 600, 582, 568, 587, 546, 557, 540, 546);
         bezierCurve(g2, 540, 546, 511, 549, 502, 538, 496, 528);
-        bezierCurve(g2, 496, 528, 373, 541, 429, 499, 356, 471);
+        bezierCurve(g2, 496, 528, 373, 541, 429, 499, 356, 471); //
         bezierCurve(g2, 356, 471, 385, 451, 431, 540, 487, 477);
         bezierCurve(g2, 487, 477, 490, 462, 503, 441, 538, 443);
         bezierCurve(g2, 538, 443, 542, 433, 546, 433, 552, 433);
         bezierCurve(g2, 552, 433, 562, 408, 593, 409, 600, 415);
+
+        xPoly = new int[]{497, 600, 600, 504};
+        yPoly = new int[]{528, 523, 542, 539};
+        polygon = new Polygon(xPoly, yPoly, nPoints);
+        gradientPaint = new GradientPaint(550, 531, moon, 550, 541, moonInside);
+        g2.setPaint(gradientPaint);
+        g2.fillPolygon(polygon);
+
         g2.setColor(Color.BLACK);
         bezierCurve(g2, 540, 546, 537, 540, 540, 506, 549, 503);
         bezierCurve(g2, 538, 443, 527, 452, 548, 473, 562, 459);
         bezierCurve(g2, 600, 431, 591, 435, 590, 479, 589, 465);
+        buffer = floodFill(buffer, 515, 492, background, moon);
+        buffer = floodFill(buffer, 368, 475, lowerdragon, moon);
+        buffer = floodFill(buffer, 557, 555, background, moonInside);
+        buffer = floodFill(buffer, 531, 545, background, moonInside);
+
         
         g.drawImage(buffer, 0, 0, null);
     }
