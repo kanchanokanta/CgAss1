@@ -1,6 +1,4 @@
 import javax.swing.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseAdapter;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.*;
@@ -14,17 +12,9 @@ public class Assignment1_65050066_65050308 extends JPanel {
     public static void main(String[] args) {
         Assignment1_65050066_65050308 m = new Assignment1_65050066_65050308();
 
-        m.addMouseListener(new MouseAdapter() {
-            public void mousePressed(MouseEvent e) {
-                int x = e.getX();
-                int y = e.getY();
-                System.out.println("x: " + x + " y: " + y);
-            }
-        });
-
         JFrame f = new JFrame();
         f.add(m);
-        f.setTitle("Assignment1_65050066_65050");
+        f.setTitle("Assignment1_65050066_65050308");
         f.setSize(600, 600);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
@@ -745,6 +735,19 @@ public class Assignment1_65050066_65050308 extends JPanel {
         bresenhamLine(g2, 160, 129, 148, 129);
         bresenhamLine(g2, 148, 129, 160, 113);
         buffer = floodFill(buffer, 164, 133, moon, Color.decode("#f2e8df"));
+
+        //ธง
+        bresenhamLine(g2, 99, 22, 99, 43);
+        bresenhamLine(g2, 99, 43, 102, 43);
+        bresenhamLine(g2, 102, 43, 102, 22);
+        bresenhamLine(g2, 102, 22, 99, 22);
+        g2.setColor(lowerdragon);
+        xPoly = new int[]{102, 102, 118};
+        yPoly = new int[]{22, 35, 35};
+        nPoints = xPoly.length;
+        polygon = new Polygon(xPoly, yPoly, nPoints);
+        g2.fillPolygon(polygon);
+        
         g.drawImage(buffer, 0, 0, null);
     }
 
